@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.auth-btn:hover {
+    background-color: #777;
+}
+
+/* Content Section Styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Categories Button */
+#categoriesBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#categoriesBtn:hover {
+    background-color: #555;
+}
+
+/* Categories Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+/* Products and Cart Section */
+.products-cart-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products {
+    flex: 3;
+    margin-right: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-name {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.product-price {
+    font-size: 12px;
+    color: #888;
+}
+
+.cart {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.cart ul {
+    list-style-type: square;
+    padding-left: 10px;
+}
+
+.cart li {
+    margin-bottom: 10px;
+}
+
+/* adding responsiveness */
+
+/* Make the header, content section, and buttons adjust to smaller screens */
+@media (max-width: 768px) {
+    /* Stack header elements vertically on smaller screens */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .auth-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* Adjust content section layout for smaller screens */
+    .content {
+        padding: 10px;
+    }
+
+    /* Stack products and cart vertically on smaller screens */
+    .products-cart-section {
+        flex-direction: column;
+    }
+
+    .products {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .cart {
+        width: 100%;
+    }
+
+    /* Adjust product table for better viewing on smaller screens */
+    table, th, td {
+        padding: 5px;
+    }
+
+    .product-image {
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .product-name {
+        font-size: 12px;
+    }
+
+    .product-price {
+        font-size: 10px;
+    }
+}
+
+/* Further adjustments for extra small screens (mobile devices) */
+@media (max-width: 480px) {
+    /* Adjust padding and button size */
+    #categoriesBtn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    /* Make product images smaller for better fit */
+    .product-image {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .product-name {
+        font-size: 10px;
+    }
+
+    .product-price {
+        font-size: 8px;
+    }
+}

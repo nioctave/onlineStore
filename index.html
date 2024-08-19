@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">MyStore</div>
+        <div class="auth-buttons">
+            <button class="auth-btn">Sign Up</button>
+            <button class="auth-btn">Log In</button>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content">
+        <!-- Categories Button -->
+        <button id="categoriesBtn" onclick="toggleCategories()">Categories</button>
+
+        <!-- Categories Navigation (Initially Hidden) -->
+        <nav id="categoriesNav" style="display: none;">
+            <button class="category-btn" onclick="fetchAllProducts()">All Products</button>
+            <!-- Dynamic category buttons will be added here -->
+        </nav>
+
+        <!-- Products Section -->
+        <div class="products-cart-section">
+            <!-- Products Table -->
+            <div class="products">
+                <table id="productsTable">
+                    <!-- Product rows will be dynamically generated here -->
+                </table>
+            </div>
+
+            <!-- Cart -->
+            <div class="cart">
+                <h3>Shopping Cart</h3>
+                <ul id="cartItems">
+                    <!-- Cart items will be dynamically generated here -->
+                </ul>
+                <p id="totalPrice">Total: $0.00</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
